@@ -1,5 +1,3 @@
-# app.py - Fake Job Detection API
-
 from flask import Flask, request, jsonify
 import joblib
 
@@ -11,7 +9,7 @@ vectorizer = joblib.load('tfidf_vectorizer.pkl')
 
 @app.route('/')
 def home():
-    return "Fake Job Detection API is running!"
+    return "✅ Fake Job Detection API is running!"
 
 @app.route('/predict', methods=['POST'])
 def predict():
